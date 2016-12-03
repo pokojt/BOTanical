@@ -18,6 +18,7 @@ var lib        = require('bower-files')({
     }
   }
 });
+var firebase    = require('firebase');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
