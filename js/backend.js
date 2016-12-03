@@ -1,8 +1,9 @@
-// exports.Constructor = function(argument){
-//   this.argument = argument;
-// };
-//
-// exports.Constructor.prototype.method = function() {
+exports.Plant = function(name,type){
+  this.name = name;
+  this.type = type;
+};
+
+// exports.Plant.prototype.method = function() {
 //
 // };
 
