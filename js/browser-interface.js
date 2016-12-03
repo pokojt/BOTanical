@@ -1,20 +1,29 @@
 var Plant = require('../js/backend.js').Plant;
 
 $(document).ready(function() {
-		$('.form-add-plant').hide();
+	$('.form-add-plant').hide();
 
 	$('button#add-plant').click(function() {
 		$('.form-add-plant').show();
 	});
 
-	$('button#submit-plant').submit(function() {
+	$('form.form-add-plant').submit(function() {
 		event.preventDefault();
 
-		var inputName = $('').value();
-		var inputType = $('').value();
-		var newPlant = new Plant();
+		var inputName = $('.nameInput').val();
+		var inputType = $('.typeInput').val();
+		var inputLight = $('.lightInput').val();
+		var inputWater = $('.waterInput').val();
 
-		newPlant(inputName, inputType);
+		var newPlant = new Plant(inputName, inputType, inputLight, inputWater);
+
+		var db = firebase.database();
+		var ref= db.ref(inputName);
+		ref.set({name:inputName, type:inputType,lightNeeds:inputLight,waterNeeds:inputWater,currentTemperature:null,currentLight:null,currentMoisture:null,schedule:null});
+
+
+   		$(".form-add-plant")[0].reset();
+   		$(".form-add-plant").hide();
 		
 	});
 
