@@ -26,13 +26,17 @@ $(document).ready(function() {
 					console.log(plants);
 					for(var i=0; i < plants.length; i++) {
 						$("#plantList").append("<div id=v"+i+" class='plant-item'>" +
-	                                  '<h3>' + plants[i].name + '</h3>' +
-	                                  '<div class="plantInfo">' +
-	                                  	'<p>' + plants[i].type + '</p>' +
-	                                  	'<p>Water Needs:' + plants[i].waterNeeds + '</p>' +
-	                                  	'<p>Light Needs:' + plants[i].lightNeeds + '</p>' +
-	                                  	'<button class="water-btn">Water '+plants[i].name+'</button>' +
+	                                  '<h3 class="plant-name">' + plants[i].name + '</h3>' +
+	                                  '<div class="plantInfo"><div class="header">' +
+                                    '<div class="left"><img src="/assets/img/plant.png"/></div>' + '<div class="right">' +
+	                                  	'<h3>Type: ' + plants[i].type + '</h3>' +
+	                                  	'<h3>Water Needs: ' + plants[i].waterNeeds + '</h3>' +
+	                                  	'<h3>Light Needs: ' + plants[i].lightNeeds + '</h3>' +
+	                                  	'<button class="water-btn">Water Me</button>' +
 	                                  	'<br><button class="btn-primary back">Back to all Plants</button>' +
+                                      '</div></div>' +
+                                      '<div class="details"><div class="water plant-icon"><img src="/assets/img/water.png"/></div><div class="humidity plant-icon"><img src="/assets/img/humidity.png"/></div><div class="temperature plant-icon"><img src="/assets/img/temperature.png"/></div><div class="light plant-icon"><img src="/assets/img/light.png"/></div></div>'
+                                      +
 	                                  '</div>' +
 	                              "</div>");
 	     				console.log(plants[i].name);
@@ -49,7 +53,7 @@ $(document).ready(function() {
 								success: function(data) {
 									var response = data;
 									console.log('this is the response', response);
-									
+
 								}
 							}).fail(function(jqxhr, status) {
 								console.log(jqxhr);

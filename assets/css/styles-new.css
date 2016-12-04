@@ -123,6 +123,15 @@ h2 {
 .expanded {
   width: 70vw !important;
   height: auto !important;
+  background: transparent!important;
+  display: flex;
+  flex-direction: column;
+  color: white !important;
+}
+
+.expanded .plant-name {
+  font-size: 3em !important;
+  margin-top: 10px;
 }
 
 .plant-item {
@@ -212,36 +221,40 @@ h2 {
   color: white;
 }
 
-.plant-detail {
+.plantInfo {
   color: white;
   width: 100%;
   max-width: 1000px;
 }
 
-.info .header {
+.plantInfo .header {
   display: flex;
 }
-.info .header>* {
+.plantInfo .header>* {
   flex: 1;
 }
-.info .header .left {
+.plantInfo .header .left {
   padding-right: 20px;
   padding-top: 15px;
 }
-.info .header .right {
+.plantInfo .header .right {
   padding-left: 40px;
   border-left: 1px solid white;
   line-height: 30px;
 }
-.info .header .right hr{
+.plantInfo .header .right hr{
   border: 1px solid rgba(255, 255, 255, .4);
 }
-.info .header .right h1, h3 {
+.plantInfo .header .right h1, h3 {
   letter-spacing: 2px;
 }
-.info .header .right h3 {
+.plantInfo .header .right h3 {
   font-weight: lighter;
   margin-top: 0px;
+  text-align: left;
+  font-family: 'Arimo';
+  text-transform:none;
+  font-size: 1.2em;
 }
 
 .details {
