@@ -1,0 +1,30 @@
+{
+  "name": "botanical",
+  "version": "1.0.0",
+  "description": "monitor your plants throughout the day!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokojt/BOTanical.git"
+  },
+  "keywords": [
+    "plants"
+  ],
+  "author": "Cynthia and her Pirate Crew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pokojt/BOTanical/issues"
+  },
+  "homepage": "https://github.com/pokojt/BOTanical#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.1",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2"
+  }
+}
