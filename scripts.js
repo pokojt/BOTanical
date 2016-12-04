@@ -53,7 +53,53 @@ $(document).ready(function() {
 								success: function(data) {
 									var response = data;
 									console.log('this is the response', response);
-
+									var dateArray = [];
+                                        var tempArray = [];
+                                        for(var j = 0; j < edisonResponse.length; j++) {
+                                            tempArray.push(edisonResponse[j].temp);
+                                            dateArray.push(edisonResponse[j].date);
+                                            console.log(dateArray);
+                                            console.log(tempArray);
+                                        };
+                                      var ctx = document.getElementById('myChart');
+                                      var xTerm = dateArray;
+                                      var yTerm = tempArray;
+                                      new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                          labels: xTerm,
+                                          datasets: [{
+                                            label: 'Hourly Temperature',
+                                            data: yTerm,
+                                            backgroundColor: [
+                                              'rgba(255, 99, 132, 0.2)',
+                                              'rgba(54, 162, 235, 0.2)',
+                                              'rgba(255, 206, 86, 0.2)',
+                                              'rgba(75, 192, 192, 0.2)',
+                                              'rgba(153, 102, 255, 0.2)',
+                                              'rgba(255, 159, 64, 0.2)'
+                                            ],
+                                            borderColor: [
+                                              'rgba(255,99,132,1)',
+                                              'rgba(54, 162, 235, 1)',
+                                              'rgba(255, 206, 86, 1)',
+                                              'rgba(75, 192, 192, 1)',
+                                              'rgba(153, 102, 255, 1)',
+                                              'rgba(255, 159, 64, 1)'
+                                            ],
+                                            borderWidth: 1
+                                          }]
+                                        },
+                                        options: {
+                                          scales: {
+                                            yAxes: [{
+                                              ticks: {
+                                                beginAtZero:true
+                                              }
+                                            }]
+                                          }
+                                        }
+                                      });
 								}
 							}).fail(function(jqxhr, status) {
 								console.log(jqxhr);
