@@ -41,8 +41,8 @@ $(document).ready(function() {
 	                              "</div>");
 	     				console.log(plants[i].name);
 	     				$('#v'+i).on('click', function() {
-	     					var thisPlant = $(this).find('h3').text();
-	     					console.log(thisPlant);
+	     					var thisPlant = $(this).find('h3.plant-name').text();
+	     					console.log('this',thisPlant);
 	     					$.ajax({
 								headers: {
 									Authorization: 'Bearer ' +  token
