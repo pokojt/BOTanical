@@ -40,20 +40,50 @@
               <select class="typeInput" name="typeList">
                 <option value="" selected>Plant type</option><
                 <option value="Succulent">Succulent</option>
-                <option value="Herb">Herb</option>
-                <option value="Seeded">Seeded</option>
+                <option value="Herb">Fern</option>
+                <option value="Seeded">Orchid</option>
+                <option value="Succulent">Herb</option>
+                <option value="Herb">Tropical</option>
+                <option value="Seeded">Vine</option>
+                <option value="Seeded">Tree</option>
+                <option value="Seeded">Unspecified</option>
               </select>
-              <select class="lightInput" name="lightList">
-                <option value="" selected>Ideal Light Level</option><
-                <option value="low-light">Low</option>
-                <option value="medium-light">Medium</option>
-                <option value="high-light">High</option>
+              <select class="potInput" name="typeList">
+                <option value="" selected>Size of Pot</option><
+                <option value="Herb">Mini (<=4")</option>
+                <option value="Seeded">Small (5"-8")</option>
+                <option value="Seeded">Medium (9"-15")</option>
+                <option value="Seeded">Large (15")</option>
               </select>
-              <select class="waterInput" name="waterList">
-                <option value="" selected>Water Needs</option><
+              <select class="waterFreqInput" name="waterList">
+                <option value="" selected>Watering Frequency</option><
                 <option value="low-water">Low</option>
                 <option value="medium-water">Medium</option>
                 <option value="high-water">High</option>
+              </select>
+              <select class="waterTimeInput" name="waterList">
+                <option value="" selected>Watering Time</option><
+                <option value="low-water">Morning</option>
+                <option value="medium-water">Mid-day</option>
+                <option value="high-water">Evening</option>
+              </select>
+              <select class="humidityInput" name="waterList">
+                <option value="" selected>Humidity Needs</option><
+                <option value="low-water">Low (< 50%)</option>
+                <option value="medium-water">Average (50-60%)</option>
+                <option value="high-water">High (> 60%)</option>
+              </select>
+              <select class="lightInput" name="lightList">
+                <option value="" selected>Light Needs</option><
+                <option value="low-light">Low (soft light, few windows in room)</option>
+                <option value="medium-light">Average / Default (ample light, windows in room)</option>
+                <option value="high-light">High (bright light, within six feet of window)</option>
+              </select>
+              <select class="tempInput" name="lightList">
+                <option value="" selected>Temperature Needs</option><
+                <option value="low-light">Low: (>65 degrees-Day)</option>
+                <option value="medium-light">Average: (65-75 degrees-Day; 55-60-Night)</option>
+                <option value="high-light">High: (+75 degrees-Day)</option>
               </select>
               <br>
               <button id="submit-plant" type="submit" name="button">Add Plant</button>

@@ -77,8 +77,10 @@ h2 {
   display: flex;
   justify-content: space-between; }
   #plantList .plant-item {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/img/plant.png");
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Cutive Mono', monospace;
-    background-color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     width: 200px;
     height: 200px;
@@ -86,17 +88,16 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-    transition: all .3s linear;
     border-radius: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all .3s linear; }
     #plantList .plant-item:hover {
       background-color: #8DC85F;
-      transition: all .3s linear; }
-      #plantList .plant-item:hover h3 {
-        color: white; }
+      background-position: center;
+      background-repeat: no-repeat; }
     #plantList .plant-item h3 {
       text-transform: uppercase;
-      font-size: 1.5em;
+      font-size: 1.8em;
       letter-spacing: 1.3px; }
 
 .add-plant-container {
