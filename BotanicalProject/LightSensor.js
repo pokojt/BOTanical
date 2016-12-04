@@ -10,13 +10,10 @@ var light = new groveSensor.GroveLight(1);
 
 // Read the input and print both the raw value and a rough lux value,
 //Go here to reference expected lux values under different daylight conditions: https://en.wikipedia.org/wiki/Daylight
-// waiting one second between readings
-    //function readLightSensorValue() {
-        console.log(light.name() + " raw value is " + light.raw_value() +
-                ", which is roughly " + light.value() + " lux");
-        var value = light.value();
-    //}
-    //setInterval(readLightSensorValue, 1000);
+    console.log(light.name() + " raw value is " + light.raw_value() +
+            ", which is roughly " + light.value() + " lux");
+    var value = light.value();
     console.log("value>>>>> " + value);
+
     return value;
 }

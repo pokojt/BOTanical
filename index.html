@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOTanical</title>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="headerContainer">
+        <h1 class="logo">BOT<span class="logo2">ANICAL</span></h1>
+      </div>
+      <div class="container">
+        <div class="inner-container">
+          <div class="your-plants">
+            <h2>Your Plants</h2>
+            <div id="plantList">
+              <div class="plant-item">
+                <h3>Henry</h3>
+              </div>
+              <div class="plant-item">
+                <h3>Pam</h3>
+              </div>
+              <div class="plant-item">
+                <h3>Delilah</h3>
+              </div>
+            </div>
+          </div>
+          <div class="add-plant-container">
+            <button id="add-plant" class="btn-primary">Add Plant</button>
+            <form class="form-add-plant" action="index.html" method="post">
+              <input class="nameInput" placeholder="Name" type="text" name="name" value="">
+              <br>
+              <select class="typeInput" name="typeList">
+                <option value="" selected>Plant type</option><
+                <option value="Succulent">Succulent</option>
+                <option value="Herb">Herb</option>
+                <option value="Seeded">Seeded</option>
+              </select>
+              <select class="lightInput" name="lightList">
+                <option value="" selected>Ideal Light Level</option><
+                <option value="low-light">Low</option>
+                <option value="medium-light">Medium</option>
+                <option value="high-light">High</option>
+              </select>
+              <select class="waterInput" name="waterList">
+                <option value="" selected>Water Needs</option><
+                <option value="low-water">Low</option>
+                <option value="medium-water">Medium</option>
+                <option value="high-water">High</option>
+              </select>
+              <br>
+              <button id="submit-plant" type="submit" name="button">Add Plant</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+     <script type="text/javascript" src='scripts.js'></script>
+  </body>
+</html>
