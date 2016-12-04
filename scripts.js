@@ -11,7 +11,6 @@ $(document).ready(function() {
 	});
 
 	// function to display all plants in database on page
-
 	$.ajax({
 				headers: {
 					Authorization: 'Bearer ' +  token
@@ -41,8 +40,6 @@ $(document).ready(function() {
 	// funtion to add a new plant and save to database
 	$('form.form-add-plant').submit(function() {
 		event.preventDefault();
-
-
 
 		var inputName = $('.nameInput').val();
 		var inputType = $('.typeInput').val();
