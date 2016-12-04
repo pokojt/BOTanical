@@ -52,6 +52,24 @@ $(document).ready(function() {
 		$(".form-add-plant")[0].reset();
  		$(".form-add-plant").hide();
  		$('button#add-plant').show();
-	});
 
+
+// $('form').on('submit', function(event) {
+// 	event.preventDefault();
+// 	var data = JSON.stringify({name: 'Fred', waterNeeds: 'high'});
+// 	$.ajax({
+// 		url: 'http://localhost:8090/plants',
+// 		type: 'GET',
+// 		// contentType: 'application/json',
+// 		headers: {
+// 			Authorization: 'Bearer ' +  token
+// 		},
+// 		// data: data,
+// 		success: function(data) {
+// 			console.log(data);
+// 		}
+// 	}).fail(function(jqxhr, status) {
+// 		console.log(jqxhr);
+// 		console.log(status);
+// 	});
 });
