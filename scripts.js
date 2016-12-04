@@ -51,7 +51,7 @@ $(document).ready(function() {
 								contentType: 'application/json',
 								url: '/plant-days/' + thisPlant,
 								success: function(data) {
-									var response = data;
+									var edisonResponse = data;
 									console.log('this is the response', response);
 									var dateArray = [];
                                         var tempArray = [];
