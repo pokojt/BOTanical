@@ -15,8 +15,39 @@ var upmBuzzer = require("jsupm_buzzer");// Initialize on GPIO 5
 var myBuzzer = new upmBuzzer.Buzzer(5);
 // Create the temperature sensor object using AIO pin 0
 var temp = new groveSensor.GroveTemp(0);
+//declare the motor
+var motor = require('jsupm_uln200xa');
+var mymotor = new motor.ULN200XA(4096, 8, 9, 10, 11);
 
+//functions
+mymotor.goForward = function()
+{
+    mymotor.setSpeed(5); // 5 RPMs
+    mymotor.setDirection(motor.ULN200XA.DIR_CW);
+    console.log("Rotating 1 revolution clockwise.");
+    mymotor.stepperSteps(4096);
+};
 
+mymotor.reverseDirection = function()
+{
+	console.log("Rotating 1/2 revolution counter clockwise.");
+	mymotor.setDirection(motor.ULN200XA.DIR_CCW);
+	mymotor.stepperSteps(2048);
+};
+
+mymotor.stop = function()
+{
+	mymotor.release();
+};
+
+mymotor.quit = function()
+{
+	mymotor = null;
+	motor.cleanUp();
+	motor = null;
+	console.log("Exiting");
+	process.exit(0);
+};
 
 // and the rest of your app goes here
 //console.log(mraa) ;     // prints mraa object to XDK IoT debug output panel?????
@@ -56,8 +87,18 @@ console.log("luxValue>>>>> " + luxValue);
 //Get full date and time in the form of datetime and convert to military time - not necessary
 console.log("DATETIME (yyyy.mm.dd.hh.mm.ss: " + fullDate);
 
+//Turn on motor to water plant if it is morning
+mymotor.goForward();
+setTimeout(mymotor.reverseDirection, 2000);
+setTimeout(function()
+{
+    mymotor.stop();
+    mymotor.quit();
+}, 2000);
+    
+
 var newDate = new Date();        
-var jsonObj = JSON.stringify({light:luxValue, temp:celsius, date:newDate, name:"Fred", username:"freddy123"});
+var jsonObj = JSON.stringify({light:luxValue, temp:celsius, date:newDate, name:"Fred", username:"freddy123", watered:true});
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var http = new XMLHttpRequest();
 var url = "http://botanicaliot.herokuapp.com/plant-days";
@@ -77,6 +118,8 @@ http.onreadystatechange = function() {//Call a function when the state changes.
     }
 }
 http.send(jsonObj);
+
+
 
 myBuzzer.stopSound();
 console.log("Buzzer Stopped!!");
