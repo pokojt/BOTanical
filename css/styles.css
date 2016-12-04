@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0px;
+  margin: 0px; }
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none; }
+
+/**
+ * Basic typography style for copy text
+ */
+.outer-container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/botanical-bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .container .inner-container {
+    max-width: 1000px; }
+
+.logo {
+  font-size: 5em;
+  color: #8DC85F;
+  margin: 0px;
+  margin-left: 20px;
+  border-bottom: 1px solid white;
+  width: 95%; }
+  .logo .logo2 {
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1.5px; }
+
+h2 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1.3px; }
+
+.btn-primary {
+  border: 2px solid #8DC85F;
+  background-color: transparent;
+  color: #8DC85F;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.3em;
+  transition: all .3s linear;
+  padding: 8px 15px; }
+  .btn-primary:hover {
+    border: 2px solid #8DC85F;
+    background-color: #8DC85F;
+    color: white; }
+
+.your-plants h2 {
+  margin-bottom: 15px; }
+
+#plantList {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between; }
+  #plantList .plant-item {
+    font-family: 'Cutive Mono', monospace;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: all .3s linear;
+    border-radius: 5px;
+    cursor: pointer; }
+    #plantList .plant-item:hover {
+      background-color: #8DC85F;
+      transition: all .3s linear; }
+      #plantList .plant-item:hover h3 {
+        color: white; }
+    #plantList .plant-item h3 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      letter-spacing: 1.3px; }
+
+.add-plant-container {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=styles.css.map */

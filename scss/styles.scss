@@ -5,7 +5,107 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-@import 'utils/index';
-@import 'base/index';
-@import 'layout/index';
-@import 'components/index';
+@import 'utils/_index';
+@import 'base/_index';
+@import 'layout/_index';
+@import 'components/_index';
+
+//Variables
+
+$primary-color: #8DC85F;
+
+.outer-container {
+  background:linear-gradient(to bottom, rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('/img/botanical-bg.jpg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .inner-container {
+    max-width: 1000px;
+  }
+}
+
+.logo {
+  font-size: 5em;
+  color: #8DC85F;
+  margin: 0px;
+  margin-left: 20px;
+  border-bottom: 1px solid white;
+  width: 95%;
+  .logo2 {
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+  }
+}
+
+h2 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1.3px;
+}
+
+.btn-primary {
+  border:2px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.3em;
+  transition: all .3s linear;
+  padding: 8px 15px;
+  &:hover {
+    border:2px solid $primary-color;
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.your-plants {
+  h2 {
+    margin-bottom: 15px;
+  }
+}
+
+#plantList {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  .plant-item {
+    font-family: 'Cutive Mono', monospace;
+    background-color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: all .3s linear;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-color;
+      transition: all .3s linear;
+      h3 {
+        color: white;
+      }
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      letter-spacing: 1.3px;
+    }
+  }
+}
+
+.add-plant-container {
+  display: flex;
+  justify-content: center;
+}
