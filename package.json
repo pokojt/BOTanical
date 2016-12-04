@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/pokojt/BOTanical#readme",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.7.1",
     "morgan": "^1.7.0"
   },
