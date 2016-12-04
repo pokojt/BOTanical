@@ -2,7 +2,7 @@
   "name": "botanical",
   "version": "1.0.0",
   "description": "monitor your plants throughout the day!",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/pokojt/BOTanical#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongoose": "^4.7.1",
     "morgan": "^1.7.0"
