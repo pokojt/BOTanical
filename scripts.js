@@ -3,11 +3,13 @@ var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoid2hhdGV2ZXIiLCJpZC
 
 
 $(document).ready(function() {
+
 	$('.form-add-plant').hide();
 	$('button#add-plant').click(function() {
 		$('.form-add-plant').fadeIn();
 		$(this).hide();
 	});
+
 
 	// function to display all plants in database on page
 	$.ajax({
