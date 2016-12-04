@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles-new.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Cutive" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,37 +18,103 @@
           <div class="your-plants">
             <h2>Your Plants</h2>
             <div id="plantList">
-      
+
             </div>
           </div>
           <div class="add-plant-container">
-            <button id="add-plant" class="btn-primary">New Plant</button>
+            <button id="add-plant" class="btn-primary">Create a New Plant</button>
             <form class="form-add-plant" action="index.html" method="post">
               <input class="nameInput" placeholder="Name" type="text" name="name" value="">
-              <br>
               <select class="typeInput" name="typeList">
                 <option value="" selected>Plant type</option><
                 <option value="Succulent">Succulent</option>
-                <option value="Herb">Herb</option>
-                <option value="Seeded">Seeded</option>
+                <option value="Herb">Fern</option>
+                <option value="Seeded">Orchid</option>
+                <option value="Succulent">Herb</option>
+                <option value="Herb">Tropical</option>
+                <option value="Seeded">Vine</option>
+                <option value="Seeded">Tree</option>
+                <option value="Seeded">Unspecified</option>
               </select>
-              <select class="lightInput" name="lightList">
-                <option value="" selected>Ideal Light Level</option><
-                <option value="low-light">Low</option>
-                <option value="medium-light">Medium</option>
-                <option value="high-light">High</option>
+              <select class="potInput" name="typeList">
+                <option value="" selected>Size of Pot</option><
+                <option value="Herb">Mini (<=4")</option>
+                <option value="Seeded">Small (5"-8")</option>
+                <option value="Seeded">Medium (9"-15")</option>
+                <option value="Seeded">Large (15")</option>
               </select>
-              <select class="waterInput" name="waterList">
-                <option value="" selected>Water Needs</option><
+              <select class="waterFreqInput" name="waterList">
+                <option value="" selected>Watering Frequency</option><
                 <option value="low-water">Low</option>
                 <option value="medium-water">Medium</option>
                 <option value="high-water">High</option>
+              </select>
+              <select class="waterTimeInput" name="waterList">
+                <option value="" selected>Watering Time</option><
+                <option value="low-water">Morning</option>
+                <option value="medium-water">Mid-day</option>
+                <option value="high-water">Evening</option>
+              </select>
+              <select class="humidityInput" name="waterList">
+                <option value="" selected>Humidity Needs</option><
+                <option value="low-water">Low (< 50%)</option>
+                <option value="medium-water">Average (50-60%)</option>
+                <option value="high-water">High (> 60%)</option>
+              </select>
+              <select class="lightInput" name="lightList">
+                <option value="" selected>Light Needs</option><
+                <option value="low-light">Low (soft light, few windows in room)</option>
+                <option value="medium-light">Average / Default (ample light, windows in room)</option>
+                <option value="high-light">High (bright light, within six feet of window)</option>
+              </select>
+              <select class="tempInput" name="lightList">
+                <option value="" selected>Temperature Needs</option><
+                <option value="low-light">Low: (>65 degrees-Day)</option>
+                <option value="medium-light">Average: (65-75 degrees-Day; 55-60-Night)</option>
+                <option value="high-light">High: (+75 degrees-Day)</option>
               </select>
               <br>
               <button id="submit-plant" type="submit" name="button">Add Plant</button>
             </form>
           </div>
 
+          <canvas id="myChart" width="400" height="400"></canvas>
+
+          <!-- <div class="plant-detail">
+            <div class="info">
+              <div class="header">
+                <div class="left">
+                  <img src="/assets/img/plant.png"/>
+                </div>
+                <div class="right">
+                  <h1>Henry</h1>
+                  <h3><strong>Type:</strong> Tree<br>
+                  <strong>Size of Pot:</strong> Mini<br>
+                  <strong>Watering Frequency:</strong> Low<br>
+                  <strong>Watering Time:</strong> Morning<br>
+                  <strong>Humitidy Needs:</strong> Average<br>
+                  <strong>Light Needs:</strong> High<br>
+                  <strong>Temperature Needs:</strong> High</h3>
+                  <button class="water-btn">Water Now</button>
+                </div>
+              </div>
+
+              <div class="details">
+                <div class="water plant-icon">
+                  <img src="/assets/img/water.png"/>
+                </div>
+                <div class="humidity plant-icon">
+                  <img src="/assets/img/humidity.png"/>
+                </div>
+                <div class="temperature plant-icon">
+                  <img src="/assets/img/temperature.png"/>
+                </div>
+                <div class="light plant-icon">
+                  <img src="/assets/img/light.png"/>
+                </div>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
