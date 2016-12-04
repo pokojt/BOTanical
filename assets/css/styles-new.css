@@ -1,0 +1,169 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+}
+
+.outer-container {
+  background: url('../img/botanical-bg.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+  min-height: 1000px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.inner-container {
+  max-width: 1000px;
+}
+
+.logo {
+  font-size: 5em;
+  color: #8DC85F;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px 0px 25px 0px;
+  margin-left: 20px;
+  border-bottom: 1px solid white;
+  width: 95%;
+  letter-spacing: 1px;
+}
+
+.logo2 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1.2px;
+}
+
+h2 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+}
+
+.btn-primary , .btn-primary:focus, .btn-primary:active {
+  border:2px solid #8DC85F;
+  background-color: transparent;
+  color: #8DC85F;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.3em;
+  transition: all .3s linear;
+  padding-top: 15px;
+  padding-bottom:15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+  border:2px solid #8DC85F;
+  background-color: #8DC85F;
+  color: white;
+}
+.btn-primary:focus {
+  outline:0;
+}
+
+.your-plants h2 {
+  margin-bottom: 15px;
+}
+
+#plantList {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plant-item {
+  background: url('../img/plant.png');
+  background-color: rgba(255, 255, 255, 0.8);
+  background-position: center;
+  background-size: contain;
+  background-repeat:no-repeat;
+  font-family: 'Cutive Mono', monospace;
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.plant-item:hover {
+  background-color: #8DC85F;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
+.plant-item h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 2em;
+  letter-spacing: 1.3px;
+  text-shadow: 1px 1px 3px rgba(140, 140, 140, .7);
+  text-align: center;
+}
+
+.add-plant-container {
+  text-align:center;
+}
+
+.form-add-plant {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-add-plant input {
+  height: 50px;
+  min-height: 50px;
+  padding-left: 10px;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+
+.form-add-plant select {
+  margin-bottom: 10px;
+  height: 40px;
+  min-height: 40px;
+  opacity: .7;
+  color: darken(#8DC85F, 20%);
+}
+
+#submit-plant {
+  border:2px solid #8DC85F;
+  background-color: rgba(141, 200, 95, .7);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.1em;
+  transition: all .3s linear;
+  padding-top: 15px;
+  padding-bottom:15px;
+  margin: 0 auto 15px auto;
+  width: 150px;
+}
+
+#submit-plant:hover {
+  border:2px solid #8DC85F;
+  background-color: #8DC85F;
+  color: white;
+}
+
+.plant-detail {
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+}
