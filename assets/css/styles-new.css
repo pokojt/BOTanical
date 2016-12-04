@@ -74,6 +74,30 @@ h2 {
   outline:0;
 }
 
+.water-btn , .water-btn:focus, .water-btn:active {
+  border:2px solid #00CED1;
+  background-color: transparent;
+  color: #00CED1;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.3em;
+  transition: all .3s linear;
+  padding-top: 15px;
+  padding-bottom:15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.water-btn:hover {
+  border:2px solid #00CED1;
+  background-color: #00CED1;
+  color: white;
+}
+.water-btn:focus {
+  outline:0;
+}
+
 .your-plants h2 {
   margin-bottom: 15px;
 }
@@ -197,12 +221,17 @@ h2 {
 .info .header .right {
   padding-left: 40px;
   border-left: 1px solid white;
+  line-height: 30px;
+}
+.info .header .right hr{
+  border: 1px solid rgba(255, 255, 255, .4);
 }
 .info .header .right h1, h3 {
   letter-spacing: 2px;
 }
 .info .header .right h3 {
   font-weight: lighter;
+  margin-top: 0px;
 }
 
 .details {
