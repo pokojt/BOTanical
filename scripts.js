@@ -24,18 +24,50 @@ $(document).ready(function() {
 					var plants = response.plants;
 					console.log(plants);
 					for(var i=0; i < plants.length; i++) {
-						$("#plantList").append("<div class='plant-item'>" +
+						$("#plantList").append("<div id=v"+i+" class='plant-item'>" +
 	                                  '<h3>' + plants[i].name + '</h3>' +
+	                                  '<div class="plantInfo">' +
+	                                  	'<p>' + plants[i].type + '</p>' +
+	                                  	'<p>Water Needs:' + plants[i].waterNeeds + '</p>' +
+	                                  	'<p>Light Needs:' + plants[i].lightNeeds + '</p>' +
+	                                  	'<button class="water-btn">Water '+plants[i].name+'</button>' +
+	                                  	'<br><button class="btn-primary back">Back to all Plants</button>' +
+	                                  '</div>' +
 	                              "</div>");
 	     				console.log(plants[i].name);
+	     				$('#v'+i).on('click', function() {
+	     					var thisPlant = $(this).find('h3').text();
+	     					console.log(thisPlant);
+	     					$.ajax({
+								headers: {
+									Authorization: 'Bearer ' +  token
+								},
+								type: 'GET',
+								contentType: 'application/json',
+								url: '/plant-days/' + thisPlant,
+								success: function(data) {
+									var response = data;
+									console.log('this is the response', response);
+									
+								}
+							}).fail(function(jqxhr, status) {
+								console.log(jqxhr);
+								console.log(status);
+							});
+							$(this).siblings().fadeOut();
+							$(this).children().fadeIn();
+							$(this).addClass('expanded');
+							$('button#add-plant').hide();
+	     				});
 					};
 				}
 			}).fail(function(jqxhr, status) {
 				console.log(jqxhr);
 				console.log(status);
 			});
-	
-
+	$(document).on('click', '.back', function() {
+		location.reload();
+	})
 
 	// funtion to add a new plant and save to database
 	$('form.form-add-plant').submit(function() {
@@ -70,4 +102,6 @@ $(document).ready(function() {
  		$('button#add-plant').show();
 
 	});
+
+
 });
