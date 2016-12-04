@@ -104,10 +104,6 @@ $(document).ready(function() {
  		$('button#add-plant').show();
 
 	});
-<<<<<<< HEAD
 
 
 });
-=======
-});
->>>>>>> bc29da074006f0720c7acd8cbb276d6f83ec92a7
