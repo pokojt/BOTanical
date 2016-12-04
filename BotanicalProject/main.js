@@ -16,7 +16,7 @@
 
 "use strict" ;
 
-
+require('./LightSensor.js');
 var mraa = require("mraa") ;
 
 // add any UPM requires that you need
@@ -40,6 +40,7 @@ var waiting = setInterval(function() {
         var fahrenheit = celsius * 9.0/5.0 + 32.0;
         console.log(celsius + " degrees Celsius, or " +
             Math.round(fahrenheit) + " degrees Fahrenheit");
+    //Get full date and time in the form of datetime and convert to military time
         i++;
         if (i == 5) clearInterval(waiting);
         }, 1000);
@@ -84,7 +85,9 @@ process.on('SIGINT', function()
 	process.exit(0);
 });
 
-////////////////////////////////////////////////
+var someVal = ls();
+console.log("someVal>>>>> " + someVal);
+/*////////////////////////////////////////////////
 //Light Sensor
 ///////////////////////////////////////////////
 // Load Grove module
@@ -100,4 +103,4 @@ function readLightSensorValue() {
     console.log(light.name() + " raw value is " + light.raw_value() +
             ", which is roughly " + light.value() + " lux");
 }
-setInterval(readLightSensorValue, 1000);
+setInterval(readLightSensorValue, 1000);*/
