@@ -18,11 +18,12 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .inner-container {
   max-width: 1000px;
+  width: 70%;
 }
 
 .logo {
@@ -77,14 +78,20 @@ h2 {
   margin-bottom: 15px;
 }
 
+.your-plants {
+}
+
 #plantList {
   margin-bottom: 70px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .plant-item {
-  background: url('../img/plant.png');
   background-color: rgba(255, 255, 255, 0.8);
   background-position: center;
   background-size: contain;
@@ -98,6 +105,7 @@ h2 {
   align-items: center;
   margin-right: 10px;
   border-radius: 5px;
+  margin-bottom: 15px;
   cursor: pointer;
   transition: all .3s linear;
 }
@@ -111,10 +119,12 @@ h2 {
 .plant-item h3 {
   text-transform: uppercase;
   font-weight: lighter;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 1.3px;
   text-shadow: 1px 1px 3px rgba(140, 140, 140, .7);
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .add-plant-container {
@@ -122,8 +132,12 @@ h2 {
 }
 
 .form-add-plant {
+  width: 70%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  border-top: 1px solid white;
+  padding-top: 25px;
 }
 
 .form-add-plant input {
@@ -132,14 +146,16 @@ h2 {
   padding-left: 10px;
   opacity: .9;
   margin-bottom: 10px;
+  font-size: 1em;
 }
 
 .form-add-plant select {
   margin-bottom: 10px;
-  height: 40px;
-  min-height: 40px;
+  height: 50px;
+  min-height: 50px;
   opacity: .7;
   color: darken(#8DC85F, 20%);
+  font-size: 1em;
 }
 
 #submit-plant {
