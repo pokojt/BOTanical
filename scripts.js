@@ -1,14 +1,15 @@
-
 var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoid2hhdGV2ZXIiLCJpZCI6IjU4NDM3ZmI3MjgzYmViNWM2ZmQzYjUyYyIsInJvbGVzIjpbXSwiaWF0IjoxNDgwODE4NjE1fQ.VvF7hVcjbytG7fGlefRM8LeOeEye_ZbsjcAxBEy36Ds';
 
 
 
 $(document).ready(function() {
+
 	$('.form-add-plant').hide();
 	$('button#add-plant').click(function() {
-		$('.form-add-plant').show();
+		$('.form-add-plant').fadeIn();
 		$(this).hide();
 	});
+
 
 	// function to display all plants in database on page
 	$.ajax({
@@ -65,9 +66,10 @@ $(document).ready(function() {
 				console.log(jqxhr);
 				console.log(status);
 			});
+
 	$(document).on('click', '.back', function() {
 		location.reload();
-	})
+	});
 
 	// funtion to add a new plant and save to database
 	$('form.form-add-plant').submit(function() {
@@ -102,6 +104,10 @@ $(document).ready(function() {
  		$('button#add-plant').show();
 
 	});
+<<<<<<< HEAD
 
 
 });
+=======
+});
+>>>>>>> bc29da074006f0720c7acd8cbb276d6f83ec92a7
