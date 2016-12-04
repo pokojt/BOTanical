@@ -23,8 +23,8 @@
         "name": "BotanicalProject.xdk"
       },
       "BotanicalProject.xdke": {
-        "previousModTime": 1480816744882,
-        "modified": 1480816744882,
+        "previousModTime": 1480821328018,
+        "modified": 1480821328018,
         "seen": true,
         "name": "BotanicalProject.xdke"
       },
@@ -41,14 +41,14 @@
         "name": "LICENSE.md"
       },
       "LightSensor.js": {
-        "previousModTime": 1480816751745,
-        "modified": 1480816751745,
+        "previousModTime": 1480819152387,
+        "modified": 1480819152387,
         "seen": true,
         "name": "LightSensor.js"
       },
       "main.js": {
-        "previousModTime": 1480816751746,
-        "modified": 1480816751746,
+        "previousModTime": 1480821452640,
+        "modified": 1480821452640,
         "seen": true,
         "name": "main.js"
       },
@@ -72,11 +72,8 @@
       }
     },
     "boardFileStatus": {
-      "LightSensor.js": {
-        "previousModTime": 1480816752223
-      },
       "main.js": {
-        "previousModTime": 1480816752223
+        "previousModTime": 1480821453056
       }
     }
   }
